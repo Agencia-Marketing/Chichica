@@ -1,0 +1,68 @@
+---
+import '@fontsource/figtree/400.css';
+import '@fontsource/figtree/600.css';
+import '@fontsource/figtree/700.css';
+import '@fontsource/caprasimo/400.css';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  current: 'inicio' | 'nosotros' | 'apadrina' | 'voluntariado' | 'empresas';
+}
+
+const { title, description, current } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NGO',
+  name: 'Fundación ChiChiCa',
+  url: 'https://chichica.org',
+  email: 'impacto@chichica.org',
+  sameAs: ['https://instagram.com/fundacionchichica'],
+  areaServed: {
+    '@type': 'Country',
+    name: 'Panamá',
+  },
+  description:
+    'Fundación sin fines de lucro que acerca educación, alimentación y conectividad a comunidades rurales de difícil acceso en Panamá.',
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} · Fundación ChiChiCa</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#c67139" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fundación ChiChiCa" />
+    <meta property="og:title" content={`${title} · Fundación ChiChiCa`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content="es_PA" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={`${title} · Fundación ChiChiCa`} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <Nav current={current} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

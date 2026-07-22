@@ -1,0 +1,147 @@
+/* Fundación ChiChiCa — design tokens (migrados de Organic design system) */
+:root {
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-text: #201e1d;
+  --color-accent: #c67139;
+  --color-accent-2: #7a8a5e;
+  --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+
+  --color-neutral-100: #f9f4ed;
+  --color-neutral-200: #eee7db;
+  --color-neutral-300: #dcd3c4;
+  --color-neutral-400: #c0b6a5;
+  --color-neutral-500: #a19786;
+  --color-neutral-600: #82796a;
+  --color-neutral-700: #645c50;
+  --color-neutral-800: #474238;
+  --color-neutral-900: #2e2b25;
+
+  --color-accent-100: #fff2eb;
+  --color-accent-200: #ffe1d0;
+  --color-accent-300: #ffc6a5;
+  --color-accent-400: #f6a06b;
+  --color-accent-500: #d67f48;
+  --color-accent-600: #b2622d;
+  --color-accent-700: #8c491a;
+  --color-accent-800: #643312;
+  --color-accent-900: #402310;
+
+  --color-accent-2-100: #f0fae1;
+  --color-accent-2-200: #e1eecc;
+  --color-accent-2-300: #ccdbb2;
+  --color-accent-2-400: #aebf92;
+  --color-accent-2-500: #8fa073;
+  --color-accent-2-600: #728157;
+  --color-accent-2-700: #56633f;
+  --color-accent-2-800: #3d472b;
+  --color-accent-2-900: #272e1b;
+
+  --font-heading: "Caprasimo", system-ui, sans-serif;
+  --font-heading-weight: 400;
+  --font-body: "Figtree", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2e2b25 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2e2b25 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2e2b25 22%, transparent);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.12;
+  margin: 0;
+}
+p { margin: 0; }
+a { color: var(--color-accent-700); text-decoration: none; }
+a:hover { color: var(--color-accent-600); }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+summary::-webkit-details-marker { display: none; }
+summary { list-style: none; }
+
+/* — navegación responsive — */
+@media (max-width: 900px) {
+  .nav-links { display: none !important; }
+  .nav-burger { display: block !important; }
+  .nav-cta { margin-left: auto; }
+  .cols2 { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 560px) {
+  .nav-cta { display: none !important; }
+  .nav-burger { margin-left: auto; }
+}
+@media (max-width: 760px) {
+  .galeria { grid-template-columns: repeat(2, 1fr) !important; grid-auto-rows: 150px !important; }
+}
+
+/* — estados hover reales (reemplazan el atributo style-hover del prototipo) — */
+.navlink:hover { color: var(--color-accent-700); }
+.navlink-active { color: var(--color-accent-700); border-bottom: 2px solid var(--color-accent); }
+.menu-item:hover { background: var(--color-accent-100); color: var(--color-accent-700); }
+
+.btn-cta { transition: background-color .2s ease; }
+.btn-cta:hover { background: var(--color-accent-600); }
+
+.btn-cta-lift { transition: background-color .2s ease, transform .2s ease; }
+.btn-cta-lift:hover { background: var(--color-accent-600); transform: translateY(-2px); }
+
+.btn-cta-onfeatured { transition: background-color .2s ease; }
+.btn-cta-onfeatured:hover { background: var(--color-accent-400); }
+
+.btn-outline-accent { transition: background-color .2s ease; }
+.btn-outline-accent:hover { background: var(--color-accent-100); }
+
+.btn-outline-accent2 { transition: background-color .2s ease; }
+.btn-outline-accent2:hover { background: var(--color-accent-2-100); }
+
+.btn-outline-neutral { transition: background-color .2s ease; }
+.btn-outline-neutral:hover { background: var(--color-neutral-100); }
+
+.card-lift-lg { transition: transform .25s ease, box-shadow .25s ease; }
+.card-lift-lg:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+.card-lift-md { transition: transform .25s ease, box-shadow .25s ease; }
+.card-lift-md:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.pricing-featured { transition: transform .25s ease; }
+.pricing-featured:hover { transform: scale(1.04) translateY(-6px); }
+
+/* — placeholder de imagen (sustituye <image-slot>/<x-import> del editor) — */
+.photo-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-neutral-400) 35%, transparent) 0 12px, transparent 12px 24px),
+    var(--color-neutral-200);
+  color: var(--color-neutral-600);
+  text-align: center;
+  font-size: 12.5px;
+  line-height: 1.4;
+  padding: 10px;
+  overflow: hidden;
+}
+.photo-slot--circle { border-radius: 50%; }
+.photo-slot span {
+  background: color-mix(in srgb, var(--color-neutral-100) 88%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+}

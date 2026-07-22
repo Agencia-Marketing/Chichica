@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PhotoSlot from '../components/PhotoSlot.astro';
+---
+
+<Layout
+  current="inicio"
+  title="Inicio"
+  description="Fundación ChiChiCa acerca educación, alimentación y conectividad a comunidades rurales de difícil acceso en Panamá. Apadrina, sé voluntario o suma tu empresa."
+>
+  <section class="hero">
+    <div class="hero__bg">
+      <PhotoSlot id="hero-puente" shape="rect" label="Foto documental: niños cruzando el puente colgante" style="width:100%;height:100%" />
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="hero__content">
+      <h1>¿Caminarías 5 horas a la escuela?</h1>
+      <p>Para cientos de niños en comunidades rurales de Panamá, esa es su realidad.</p>
+      <div class="hero__actions">
+        <a href="/apadrina" class="btn-cta-lift hero-cta">Hazte Padrino Hoy</a>
+        <a href="#historia" class="hero-link">Conoce nuestra historia</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos">
+    <div class="logos__inner">
+      <span class="logos__label">Respaldados por</span>
+      <div class="logos__grid">
+        <PhotoSlot label="MEDUCA" style="width:120px;height:44px" />
+        <PhotoSlot label="MIDES" style="width:120px;height:44px" />
+        <PhotoSlot label="DGI" style="width:120px;height:44px" />
+        <PhotoSlot label="Georgetown University" style="width:140px;height:44px" />
+        <PhotoSlot label="Panamá en Positivo" style="width:130px;height:44px" />
+      </div>
+    </div>
+  </section>
+
+  <section id="realidad" class="realidad">
+    <div class="realidad__inner">
+      <div class="realidad__intro">
+        <h2>Su realidad</h2>
+        <p>Donde la distancia y la necesidad convierten el derecho a aprender en un privilegio.</p>
+      </div>
+      <div class="realidad__grid">
+        <div class="realidad__item">
+          <div class="realidad__photo"><PhotoSlot shape="rect" label="Foto B/N: camino rural" /></div>
+          <h3>Distancias Extremas</h3>
+          <p>Horas de caminata en terrenos de difícil acceso solo para llegar a clases.</p>
+        </div>
+        <div class="realidad__item">
+          <div class="realidad__photo"><PhotoSlot shape="rect" label="Foto B/N: comunidad" /></div>
+          <h3>Recursos</h3>
+          <p>Familias que deben elegir entre la alimentación diaria o cubrir uniformes y útiles.</p>
+        </div>
+        <div class="realidad__item">
+          <div class="realidad__photo"><PhotoSlot shape="rect" label="Foto B/N: cruce de río" /></div>
+          <h3>Conectividad</h3>
+          <p>Escuelas sin acceso a internet ni herramientas digitales para enfrentar el futuro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia" class="historia">
+    <div class="historia__inner cols2">
+      <div class="historia__photo-wrap">
+        <PhotoSlot id="foto-joel" shape="rect" label="Foto de Joel" style="width:320px;height:360px" />
+        <span class="historia__caption">Joel, camino a clases</span>
+      </div>
+      <div>
+        <span class="tag-pill">La esperanza</span>
+        <h2>Cuando existen las condiciones, los sueños encuentran su camino</h2>
+        <p class="historia__text">Todo cambia cuando alguien decide involucrarse. Joel vive en una comunidad rural de difícil acceso. Durante años caminó largas distancias para asistir a clases. Hoy cuenta con el apoyo necesario para seguir estudiando y construir un futuro diferente. Su historia cambió porque alguien decidió ayudar.</p>
+        <p class="historia__signature">Joel — Diciembre 2025, Chiguirí Arriba</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="impacto" class="impacto">
+    <div class="impacto__inner">
+      <div class="impacto__grid">
+        <div>
+          <div class="impacto__number">+3,000</div>
+          <div class="impacto__label">niños impactados</div>
+        </div>
+        <div>
+          <div class="impacto__number">+700</div>
+          <div class="impacto__label">familias beneficiadas</div>
+        </div>
+        <div>
+          <div class="impacto__number">+43</div>
+          <div class="impacto__label">comunidades acompañadas</div>
+        </div>
+      </div>
+      <p class="impacto__since">Desde 2018 caminando junto a quienes más lo necesitan.</p>
+    </div>
+  </section>
+
+  <section id="apadrina" class="cambio">
+    <div class="cambio__inner">
+      <h2>Sé parte del cambio</h2>
+      <div class="cambio__grid">
+        <div class="cambio__card card-lift-lg">
+          <span class="cambio__icon cambio__icon--accent">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          </span>
+          <h3>Apadrina un niño</h3>
+          <p>Tu aporte mensual sostiene educación, alimentación y conectividad todo el año.</p>
+          <a href="/apadrina" class="btn-cta cambio__btn">Quiero Apadrinar</a>
+        </div>
+        <div class="cambio__card card-lift-lg">
+          <span class="cambio__icon cambio__icon--accent2">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path><path d="m2 15 6 6"></path></svg>
+          </span>
+          <h3>Sé voluntario</h3>
+          <p>Dona tu tiempo y energía en jornadas logísticas y talleres comunitarios.</p>
+          <a href="/voluntariado" class="btn-outline-accent2 cambio__btn cambio__btn--outline-accent2">Hazte Voluntario</a>
+        </div>
+        <div class="cambio__card card-lift-lg">
+          <span class="cambio__icon cambio__icon--neutral">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
+          </span>
+          <h3>Suma tu empresa</h3>
+          <p>Conecta tu marca con impacto real a través de Marcas con Propósito.</p>
+          <a href="/empresas" class="btn-outline-neutral cambio__btn cambio__btn--outline-neutral">Quiero sumar mi empresa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .hero__bg { position: absolute; inset: 0; }
+  .hero__scrim {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(20,24,16,0.50) 0%, rgba(20,24,16,0.29) 55%, rgba(20,24,16,0.15) 92%, rgba(20,24,16,0) 100%);
+  }
+  .hero__content {
+    position: relative;
+    text-align: center;
+    padding: 140px 24px 100px;
+    max-width: 880px;
+    animation: heroRise 0.9s ease-out both;
+  }
+  .hero__content h1 {
+    color: #fff;
+    font-size: clamp(44px, 6.4vw, 84px);
+    line-height: 1.06;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+    text-wrap: balance;
+  }
+  .hero__content p {
+    color: rgba(255,255,255,0.94);
+    font-size: clamp(18px, 2vw, 23px);
+    line-height: 1.5;
+    margin: 22px auto 36px;
+    max-width: 620px;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+  }
+  .hero__actions { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .hero-cta {
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 999px;
+    padding: 17px 36px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+  }
+  .hero-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    padding-bottom: 2px;
+  }
+  .hero-link:hover { border-bottom-color: #fff; color: #fff; }
+  @keyframes heroRise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  .logos { background: #fff; border-bottom: 1px solid rgba(32,30,29,0.07); padding: 26px 24px; }
+  .logos__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .logos__label { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600); font-weight: 600; white-space: nowrap; }
+  .logos__grid { display: flex; align-items: center; gap: 36px; flex-wrap: wrap; filter: grayscale(1); opacity: 0.65; }
+
+  .realidad { padding: 110px 28px 100px; background: var(--color-bg); }
+  .realidad__inner { max-width: 1140px; margin: 0 auto; }
+  .realidad__intro { max-width: 640px; margin-bottom: 56px; }
+  .realidad__intro h2 { font-size: clamp(34px, 4vw, 48px); margin: 0 0 16px; }
+  .realidad__intro p { font-size: 19px; line-height: 1.55; color: var(--color-neutral-700); text-wrap: pretty; }
+  .realidad__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 36px; }
+  .realidad__item { display: flex; flex-direction: column; gap: 18px; }
+  .realidad__photo { filter: grayscale(1) contrast(1.05); border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3; }
+  .realidad__item h3 { font-size: 24px; }
+  .realidad__item p { font-size: 16px; line-height: 1.6; color: var(--color-neutral-700); text-wrap: pretty; }
+
+  .historia { background: #fff; padding: 110px 28px; }
+  .historia__inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: minmax(280px, 420px) 1fr; gap: 72px; align-items: center; }
+  .historia__photo-wrap {
+    justify-self: center;
+    background: #fff;
+    padding: 16px 16px 58px;
+    box-shadow: var(--shadow-lg);
+    transform: rotate(-2.5deg);
+    border-radius: 4px;
+    position: relative;
+  }
+  .historia__caption { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; font-style: italic; color: var(--color-neutral-600); font-size: 15px; }
+  .tag-pill {
+    display: inline-block;
+    background: var(--color-accent-2-100);
+    color: var(--color-accent-2-800);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .historia__inner h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12; margin: 0 0 24px; text-wrap: balance; }
+  .historia__text { font-size: 17.5px; line-height: 1.7; color: var(--color-neutral-700); margin: 0 0 28px; text-wrap: pretty; }
+  .historia__signature { font-family: var(--font-heading); font-size: 19px; color: var(--color-accent-700); }
+
+  .impacto { background: var(--color-accent-2-900); color: #fff; padding: 110px 28px 100px; text-align: center; }
+  .impacto__inner { max-width: 1000px; margin: 0 auto; }
+  .impacto__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 48px; }
+  .impacto__number { font-family: var(--font-heading); font-size: clamp(56px, 7vw, 92px); line-height: 1; color: #fff; }
+  .impacto__label { margin-top: 14px; font-size: 17px; font-weight: 600; color: var(--color-accent-2-200); }
+  .impacto__since { margin: 64px 0 0; font-size: 15px; letter-spacing: 0.04em; color: var(--color-accent-2-300); }
+
+  .cambio { padding: 110px 28px 120px; background: var(--color-bg); }
+  .cambio__inner { max-width: 1140px; margin: 0 auto; }
+  .cambio__inner h2 { font-size: clamp(34px, 4vw, 48px); text-align: center; margin: 0 0 60px; }
+  .cambio__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+  .cambio__card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 44px 36px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .cambio__icon { width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; }
+  .cambio__icon--accent { background: var(--color-accent-100); color: var(--color-accent-700); }
+  .cambio__icon--accent2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+  .cambio__icon--neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
+  .cambio__card h3 { font-size: 26px; }
+  .cambio__card p { font-size: 15.5px; line-height: 1.6; color: var(--color-neutral-700); text-wrap: pretty; }
+  .cambio__btn { margin-top: 8px; padding: 13px 28px; font-size: 15px; font-weight: 700; border-radius: 999px; }
+  .cambio__card > .btn-cta { background: var(--color-accent); color: #fff; }
+  .cambio__btn--outline-accent2 { background: #fff; color: var(--color-accent-2-800); border: 2px solid var(--color-accent-2-500); }
+  .cambio__btn--outline-neutral { background: #fff; color: var(--color-neutral-800); border: 2px solid var(--color-neutral-400); }
+</style>

@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PhotoSlot from '../components/PhotoSlot.astro';
+
+const equipo = [1, 2, 3, 4, 5, 6, 7, 8];
+const aliados = [
+  'MEDUCA', 'MIDES', 'Georgetown University', 'Lacoste',
+  'Reebok', 'Heineken', 'Davivienda', 'Super Xtra',
+];
+---
+
+<Layout
+  current="nosotros"
+  title="Nosotros"
+  description="Conoce la historia de Fundación ChiChiCa: desde 2018 caminando junto a comunidades rurales de Panamá con programas de acceso escolar, conectividad y desarrollo humano."
+>
+  <section class="hero">
+    <div class="hero__bg">
+      <PhotoSlot shape="rect" label="Foto: equipo en comunidad o entrega de útiles" style="width:100%;height:100%" />
+    </div>
+    <div class="hero__scrim"></div>
+    <h1 class="hero__title">Nuestra Historia</h1>
+  </section>
+
+  <section class="origen">
+    <div class="origen__inner cols2">
+      <div class="origen__collage">
+        <div class="origen__photo origen__photo--1"><PhotoSlot shape="rect" label="Foto: jornada en comunidad" /></div>
+        <div class="origen__photo origen__photo--2"><PhotoSlot shape="rect" label="Foto: entrega de útiles" /></div>
+        <div class="origen__photo origen__photo--3"><PhotoSlot shape="rect" label="Foto: fiesta de navidad" /></div>
+        <span class="origen__dot origen__dot--lg"></span>
+        <span class="origen__dot origen__dot--sm"></span>
+      </div>
+      <div>
+        <span class="tag-pill">Desde 2018</span>
+        <h2>Todo comenzó con una pregunta sencilla</h2>
+        <p class="origen__text">¿Qué podemos hacer por comunidades que muchas veces permanecen invisibles? Lo que inició como fiestas de navidad entre amigos fue creciendo hasta convertirse en una misión mucho más grande.</p>
+        <p class="origen__text">Con el tiempo entendimos que no bastaba con ayudar una vez. Había que construir oportunidades sostenibles. Así nació Fundación ChiChiCa.</p>
+        <p class="origen__text origen__text--last">Hoy trabajamos junto a comunidades rurales de difícil acceso para acercar educación, conectividad y esperanza a cientos de familias.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="creemos">
+    <div class="creemos__inner">
+      <span class="creemos__icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0-8-8c0 4.5 3 7 3 7l-1 3 4-1.5s1 .5 2 .5"></path><path d="M8 12h.01"></path><path d="M12 12h.01"></path><path d="M16 12h.01"></path></svg>
+      </span>
+      <blockquote class="creemos__quote">
+        <p>Creemos que ningún niño debería arriesgar su futuro por la distancia, la pobreza o el abandono.</p>
+        <p>Creemos que la educación es una oportunidad capaz de cambiar una vida, una familia y una comunidad entera.</p>
+        <p>Creemos en caminar junto a las personas, escuchar antes de actuar y construir soluciones con ellas.</p>
+        <p>Y creemos que cuando muchas personas deciden involucrarse, el cambio deja de ser una posibilidad y se convierte en una realidad.</p>
+      </blockquote>
+      <p class="creemos__tagline">Educación accesible. Futuro posible. Esto es Fundación ChiChiCa.</p>
+    </div>
+  </section>
+
+  <section class="programas">
+    <div class="programas__inner">
+      <h2>3 programas, un mismo propósito</h2>
+      <div class="programas__grid">
+        <div class="programa card-lift-md">
+          <div class="programa__photo"><PhotoSlot shape="rect" label="Foto: aula / útiles escolares" /></div>
+          <div class="programa__body">
+            <span class="tag-inline tag-inline--accent">Acceso y retención escolar</span>
+            <h3>Somos Padrino</h3>
+            <ul class="programa__list">
+              <li>Útiles escolares</li>
+              <li>Uniformes y calzado</li>
+              <li>Alimentación diaria</li>
+            </ul>
+            <a href="/apadrina" class="btn-outline-accent programa__cta programa__cta--accent">Conoce más</a>
+          </div>
+        </div>
+        <div class="programa card-lift-md">
+          <div class="programa__photo"><PhotoSlot shape="rect" label="Foto: panel solar / Starlink" /></div>
+          <div class="programa__body">
+            <span class="tag-inline tag-inline--accent2">Infraestructura y conectividad</span>
+            <h3>Somos Más</h3>
+            <ul class="programa__list programa__list--accent2">
+              <li>Internet satelital Starlink</li>
+              <li>Paneles solares</li>
+              <li>Equipamiento tecnológico</li>
+            </ul>
+            <a href="/apadrina" class="btn-outline-accent2 programa__cta programa__cta--accent2">Conoce más</a>
+          </div>
+        </div>
+        <div class="programa card-lift-md">
+          <div class="programa__photo"><PhotoSlot shape="rect" label="Foto: actividad recreativa" /></div>
+          <div class="programa__body">
+            <span class="tag-inline tag-inline--accent">Desarrollo humano y motivación</span>
+            <h3>Somos Alegría</h3>
+            <ul class="programa__list">
+              <li>Actividades recreativas y talleres</li>
+              <li>Experiencias educativas</li>
+              <li>Celebraciones comunitarias</li>
+            </ul>
+            <a href="/voluntariado" class="btn-outline-accent programa__cta programa__cta--accent">Conoce más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="equipo">
+    <div class="equipo__inner">
+      <h2>Las personas detrás</h2>
+      <p class="equipo__lead">Somos personas que decidieron no mirar hacia otro lado.</p>
+      <div class="equipo__grid">
+        {equipo.map((i) => (
+          <div class="equipo__item">
+            <PhotoSlot shape="circle" label="Foto" style="width:110px;height:110px" />
+            <span class="equipo__meta">Nombre<br />Rol</span>
+          </div>
+        ))}
+      </div>
+      <p class="equipo__pending">Nombres y roles pendientes de confirmación del equipo.</p>
+    </div>
+  </section>
+
+  <section class="aliados">
+    <div class="aliados__inner">
+      <h2>Aliados que caminan con nosotros</h2>
+      <p class="aliados__lead">Instituciones y empresas que creen en la educación como motor de cambio.</p>
+      <div class="aliados__grid">
+        {aliados.map((nombre) => (
+          <PhotoSlot label={nombre} style="width:100%;height:56px" />
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 380px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-top: 72px;
+  }
+  .hero__bg { position: absolute; inset: 0; }
+  .hero__scrim { position: absolute; inset: 0; pointer-events: none; background: rgba(20,24,16,0.5); }
+  .hero__title {
+    position: relative;
+    font-size: clamp(40px, 5.5vw, 68px);
+    color: #fff;
+    padding: 60px 24px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+  }
+
+  .origen { background: #fff; padding: 110px 28px; }
+  .origen__inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); gap: 72px; align-items: center; }
+  .origen__collage { position: relative; height: 520px; }
+  .origen__photo { position: absolute; border-radius: var(--radius-lg); overflow: hidden; }
+  .origen__photo--1 { top: 0; left: 0; width: 62%; height: 300px; box-shadow: var(--shadow-md); transform: rotate(-2deg); }
+  .origen__photo--2 { top: 150px; right: 0; width: 52%; height: 260px; box-shadow: var(--shadow-lg); transform: rotate(2.5deg); z-index: 2; }
+  .origen__photo--3 { bottom: 0; left: 8%; width: 48%; height: 200px; box-shadow: var(--shadow-md); transform: rotate(-1.5deg); }
+  .origen__dot { position: absolute; border-radius: 50%; }
+  .origen__dot--lg { bottom: 40px; right: 6%; width: 84px; height: 84px; background: var(--color-accent-2-200); z-index: 1; }
+  .origen__dot--sm { top: -18px; right: 18%; width: 52px; height: 52px; background: var(--color-accent-100); }
+  .origen__inner h2 { font-size: clamp(30px, 3.4vw, 42px); line-height: 1.12; margin: 0 0 24px; text-wrap: balance; }
+  .origen__text { font-size: 17px; line-height: 1.75; color: var(--color-neutral-700); margin: 0 0 18px; text-wrap: pretty; }
+  .origen__text--last { margin: 0; }
+
+  .creemos { background: var(--color-bg); background-image: radial-gradient(rgba(198,113,57,0.05) 1px, transparent 1px); background-size: 22px 22px; padding: 120px 28px; }
+  .creemos__inner { max-width: 860px; margin: 0 auto; text-align: center; }
+  .creemos__icon { display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--color-accent-2-100); color: var(--color-accent-2-800); margin-bottom: 36px; }
+  .creemos__quote { margin: 0; font-size: clamp(22px, 2.8vw, 32px); line-height: 1.45; color: var(--color-text); text-wrap: balance; }
+  .creemos__quote p { margin: 0 0 22px; }
+  .creemos__quote p:last-child { margin-bottom: 40px; }
+  .creemos__tagline { margin: 0; font-family: var(--font-body); font-weight: 800; font-size: clamp(19px, 2.2vw, 24px); color: var(--color-accent-700); }
+
+  .programas { background: #fff; padding: 110px 28px; }
+  .programas__inner { max-width: 1140px; margin: 0 auto; }
+  .programas__inner > h2 { font-size: clamp(32px, 3.8vw, 46px); text-align: center; margin: 0 0 60px; }
+  .programas__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+  .programa { background: var(--color-bg); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+  .programa__photo { height: 220px; }
+  .programa__body { padding: 30px 28px 34px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .tag-inline { align-self: flex-start; border-radius: 999px; padding: 4px 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  .tag-inline--accent { background: var(--color-accent-100); color: var(--color-accent-700); }
+  .tag-inline--accent2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+  .programa__body h3 { font-size: 26px; }
+  .programa__list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15.5px; line-height: 1.5; color: var(--color-neutral-700); }
+  .programa__list li { display: flex; gap: 10px; align-items: baseline; }
+  .programa__list li::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--color-accent); flex: none; transform: translateY(-1px); }
+  .programa__list--accent2 li::before { background: var(--color-accent-2-500); }
+  .programa__cta { margin-top: auto; align-self: flex-start; border-radius: 999px; padding: 10px 24px; font-size: 14.5px; font-weight: 700; }
+  .programa__cta--accent { background: #fff; color: var(--color-accent-700); border: 2px solid var(--color-accent); }
+  .programa__cta--accent2 { background: #fff; color: var(--color-accent-2-800); border: 2px solid var(--color-accent-2-500); }
+
+  .equipo { background: var(--color-bg); padding: 110px 28px; }
+  .equipo__inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .equipo__inner > h2 { font-size: clamp(32px, 3.8vw, 46px); margin: 0 0 14px; }
+  .equipo__lead { font-size: 18px; color: var(--color-neutral-700); margin: 0 0 56px; }
+  .equipo__grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; }
+  .equipo__item { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 128px; }
+  .equipo__meta { font-size: 13.5px; color: var(--color-neutral-600); line-height: 1.3; }
+  .equipo__pending { margin: 40px 0 0; font-size: 13px; color: var(--color-neutral-500); }
+
+  .aliados { background: #fff; padding: 90px 28px 100px; }
+  .aliados__inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+  .aliados__inner > h2 { font-size: clamp(26px, 3vw, 36px); margin: 0 0 12px; }
+  .aliados__lead { font-size: 16px; color: var(--color-neutral-600); margin: 0 0 48px; }
+  .aliados__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px; align-items: center; filter: grayscale(1); opacity: 0.65; }
+</style>

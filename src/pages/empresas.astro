@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PhotoSlot from '../components/PhotoSlot.astro';
+
+const beneficios = [
+  'Presencia de marca en materiales digitales',
+  'Reconocimiento en redes sociales',
+  'Certificado de membresía',
+  'Boletín de impacto',
+  'Acceso para colaboradores a jornadas de voluntariado',
+  'Reporte anual de impacto',
+];
+const empresas = ['Lacoste', 'Reebok', 'Jampro', 'Davivienda', 'Super Xtra', 'Heineken'];
+const check = `<path d="M20 6 9 17l-5-5"></path>`;
+---
+
+<Layout
+  current="empresas"
+  title="Empresas"
+  description="Súmate a Marcas con Propósito: conecta tu empresa con impacto real en comunidades rurales de Panamá a través de Fundación ChiChiCa."
+>
+  <section class="hero">
+    <div class="hero__bg">
+      <PhotoSlot shape="rect" label="Foto: equipo corporativo de voluntarios con camisetas de marca" style="width:100%;height:100%" />
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="hero__content">
+      <h1>Conecta tu marca con impacto real</h1>
+      <p>Responsabilidad social con resultados visibles en comunidades rurales de Panamá.</p>
+      <div class="hero__actions">
+        <a href="#paquete" class="btn-cta-lift hero__cta">Súmate a Marcas con Propósito</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="paquete" class="paquete">
+    <div class="paquete__inner cols2">
+      <div>
+        <span class="tag-pill tag-pill--accent2">Marcas con Propósito</span>
+        <h2>Un paquete de RSE simple y continuo</h2>
+        <p class="paquete__text">Apoya de forma continua programas de educación, alimentación y conectividad en comunidades rurales. Tu empresa acompaña, tus colaboradores participan y tu marca queda asociada a un cambio que se puede ver.</p>
+        <div class="paquete__price"><span class="paquete__amount">$150</span><span class="paquete__period">/ mes</span></div>
+        <p class="paquete__note">Opciones trimestrales o anuales disponibles.</p>
+        <a href="mailto:impacto@chichica.org?subject=Quiero sumar a mi empresa a Marcas con Propósito" class="btn-cta-lift paquete__cta">Quiero sumar mi empresa</a>
+      </div>
+      <div class="paquete__card">
+        <h3>Lo que recibe tu empresa</h3>
+        <ul class="paquete__list">
+          {beneficios.map((b) => (
+            <li><span class="paquete__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" set:html={check} /></span>{b}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="confian">
+    <div class="confian__inner">
+      <h2>Empresas que ya confían</h2>
+      <p class="confian__lead">Marcas que ya caminan con las comunidades.</p>
+      <div class="confian__grid">
+        {empresas.map((nombre) => (
+          <div class="confian__logo"><PhotoSlot label={nombre} style="width:100%;height:52px" /></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="cta-final__inner">
+      <h2>Tu marca puede llegar donde pocas llegan</h2>
+      <a href="mailto:impacto@chichica.org?subject=Quiero sumar a mi empresa" class="cta-final__btn">Quiero sumar a mi empresa</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 480px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-top: 72px;
+  }
+  .hero__bg { position: absolute; inset: 0; }
+  .hero__scrim {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(20,24,16,0.55) 0%, rgba(20,24,16,0.38) 70%, rgba(20,24,16,0.12) 100%);
+  }
+  .hero__content { position: relative; text-align: center; padding: 80px 24px; max-width: 780px; }
+  .hero__content h1 { font-size: clamp(40px, 5.5vw, 68px); line-height: 1.08; margin: 0 0 18px; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.35); text-wrap: balance; }
+  .hero__content p { color: rgba(255,255,255,0.94); font-size: clamp(17px, 1.9vw, 21px); line-height: 1.55; margin: 0 0 34px; text-shadow: 0 1px 12px rgba(0,0,0,0.4); text-wrap: pretty; }
+  .hero__actions { display: flex; justify-content: center; }
+  .hero__cta { background: var(--color-accent); color: #fff; border-radius: 999px; padding: 17px 36px; font-size: 17px; font-weight: 700; box-shadow: var(--shadow-md); }
+
+  .paquete { background: #fff; padding: 110px 28px; }
+  .paquete__inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(300px, 1fr) minmax(320px, 1fr); gap: 72px; align-items: center; }
+  .tag-pill--accent2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+  .paquete h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12; margin: 0 0 24px; text-wrap: balance; }
+  .paquete__text { font-size: 17.5px; line-height: 1.7; color: var(--color-neutral-700); margin: 0 0 28px; text-wrap: pretty; }
+  .paquete__price { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+  .paquete__amount { font-family: var(--font-heading); font-size: 64px; line-height: 1; }
+  .paquete__period { font-size: 17px; color: var(--color-neutral-600); }
+  .paquete__note { font-size: 14.5px; color: var(--color-neutral-600); margin: 0 0 32px; }
+  .paquete__cta { display: inline-block; background: var(--color-accent); color: #fff; border-radius: 999px; padding: 16px 34px; font-size: 16.5px; font-weight: 700; box-shadow: var(--shadow-md); }
+  .paquete__card { background: var(--color-bg); border-radius: var(--radius-lg); padding: 44px 40px; box-shadow: var(--shadow-md); }
+  .paquete__card h3 { font-size: 24px; margin: 0 0 28px; }
+  .paquete__list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 18px; font-size: 16px; line-height: 1.55; color: var(--color-neutral-800); }
+  .paquete__list li { display: flex; gap: 14px; align-items: baseline; }
+  .paquete__check { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--color-accent-2-100); color: var(--color-accent-2-800); display: grid; place-items: center; transform: translateY(5px); }
+
+  .confian { background: var(--color-bg); padding: 100px 28px; }
+  .confian__inner { max-width: 1040px; margin: 0 auto; text-align: center; }
+  .confian__inner > h2 { font-size: clamp(28px, 3.2vw, 40px); margin: 0 0 12px; }
+  .confian__lead { font-size: 16.5px; color: var(--color-neutral-600); margin: 0 0 56px; }
+  .confian__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px; align-items: center; }
+  .confian__logo { background: #fff; border-radius: var(--radius-lg); padding: 22px 18px; box-shadow: var(--shadow-sm); filter: grayscale(1); }
+
+  .cta-final { background: var(--color-accent); padding: 100px 28px; text-align: center; }
+  .cta-final__inner { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 32px; }
+  .cta-final__inner h2 { color: #fff; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.12; text-wrap: balance; }
+  .cta-final__btn { background: #fff; color: var(--color-accent-700); border-radius: 999px; padding: 18px 44px; font-size: 18px; font-weight: 700; box-shadow: var(--shadow-md); transition: background-color .2s ease, transform .2s ease; }
+  .cta-final__btn:hover { background: var(--color-accent-100); transform: translateY(-2px); }
+</style>

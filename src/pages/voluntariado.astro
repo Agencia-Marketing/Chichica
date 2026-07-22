@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PhotoSlot from '../components/PhotoSlot.astro';
+---
+
+<Layout
+  current="voluntariado"
+  title="Voluntariado"
+  description="Dona tu tiempo, conocimientos y energía en jornadas logísticas y talleres comunitarios de Fundación ChiChiCa en comunidades rurales de Panamá."
+>
+  <section class="hero">
+    <div class="hero__bg">
+      <PhotoSlot shape="rect" label="Foto: voluntarios pintando la cancha" style="width:100%;height:100%" />
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="hero__content">
+      <h1>Vive el impacto de cerca</h1>
+      <p>Buscamos personas que deseen donar su tiempo, conocimientos profesionales y energía en nuestras jornadas logísticas y talleres comunitarios.</p>
+    </div>
+  </section>
+
+  <section class="tareas">
+    <div class="tareas__inner">
+      <div class="tareas__intro">
+        <h2>Qué vas a hacer</h2>
+        <p>Nada abstracto: cada jornada tiene tareas concretas y un impacto que puedes ver el mismo día.</p>
+      </div>
+      <div class="tareas__grid">
+        <div class="tarea">
+          <span class="tarea__icon tarea__icon--accent">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m14.622 17.897-10.68-2.913"></path><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"></path><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.254.852l7.037 7.037a.507.507 0 0 0 .852-.254C10.54 16.97 11.29 14.804 14 13"></path></svg>
+          </span>
+          <div>
+            <h3>Jornadas logísticas</h3>
+            <p>Pintura, construcción y entrega de útiles en comunidades de difícil acceso.</p>
+          </div>
+        </div>
+        <div class="tarea">
+          <span class="tarea__icon tarea__icon--accent2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+          </span>
+          <div>
+            <h3>Talleres comunitarios</h3>
+            <p>Talleres de inspiración y conocimiento profesional compartido con niños y familias.</p>
+          </div>
+        </div>
+        <div class="tarea">
+          <span class="tarea__icon tarea__icon--accent2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+          </span>
+          <div>
+            <h3>Comedor infantil</h3>
+            <p>Apoyo en el comedor y actividades recreativas durante la semana.</p>
+          </div>
+        </div>
+        <div class="tarea">
+          <span class="tarea__icon tarea__icon--accent">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>
+          </span>
+          <div>
+            <h3>Fiesta de Navidad</h3>
+            <p>El evento del año: regalos, juegos y celebración con toda la comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria-section">
+    <div class="galeria-section__inner">
+      <h2>El voluntariado en acción</h2>
+      <div class="galeria">
+        <div class="galeria__item galeria__item--big"><PhotoSlot shape="rect" label="Foto: pintura de cancha" /></div>
+        <div class="galeria__item"><PhotoSlot shape="rect" label="Foto: entrega de regalos" /></div>
+        <div class="galeria__item galeria__item--tall"><PhotoSlot shape="rect" label="Foto: comedor" /></div>
+        <div class="galeria__item"><PhotoSlot shape="rect" label="Foto: taller" /></div>
+        <div class="galeria__item"><PhotoSlot shape="rect" label="Foto: jornada logística" /></div>
+        <div class="galeria__item"><PhotoSlot shape="rect" label="Foto: fiesta de Navidad" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="cta-final__inner">
+      <h2>Tu tiempo también transforma vidas</h2>
+      <a href="mailto:impacto@chichica.org?subject=Quiero ser voluntario" class="cta-final__btn">Hazte Voluntario</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 460px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-top: 72px;
+  }
+  .hero__bg { position: absolute; inset: 0; }
+  .hero__scrim {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(20,24,16,0.55) 0%, rgba(20,24,16,0.35) 70%, rgba(20,24,16,0.1) 100%);
+  }
+  .hero__content { position: relative; text-align: center; padding: 80px 24px; max-width: 760px; }
+  .hero__content h1 { font-size: clamp(40px, 5.5vw, 68px); line-height: 1.08; margin: 0 0 18px; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.35); }
+  .hero__content p { color: rgba(255,255,255,0.94); font-size: clamp(17px, 1.9vw, 21px); line-height: 1.55; margin: 0; text-shadow: 0 1px 12px rgba(0,0,0,0.4); text-wrap: pretty; }
+
+  .tareas { background: #fff; padding: 110px 28px; }
+  .tareas__inner { max-width: 1080px; margin: 0 auto; }
+  .tareas__intro { max-width: 560px; margin: 0 0 60px; }
+  .tareas__intro h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; margin: 0 0 16px; }
+  .tareas__intro p { font-size: 18px; line-height: 1.6; color: var(--color-neutral-700); text-wrap: pretty; }
+  .tareas__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); gap: 28px; }
+  .tarea { display: flex; gap: 22px; align-items: flex-start; background: var(--color-bg); border-radius: var(--radius-lg); padding: 30px; }
+  .tarea__icon { flex: none; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; }
+  .tarea__icon--accent { background: var(--color-accent-100); color: var(--color-accent-700); }
+  .tarea__icon--accent2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+  .tarea h3 { font-size: 22px; margin: 0 0 8px; }
+  .tarea p { font-size: 15.5px; line-height: 1.6; color: var(--color-neutral-700); text-wrap: pretty; }
+
+  .galeria-section { background: var(--color-bg); padding: 110px 28px; }
+  .galeria-section__inner { max-width: 1140px; margin: 0 auto; }
+  .galeria-section__inner > h2 { font-size: clamp(30px, 3.6vw, 44px); text-align: center; margin: 0 0 56px; }
+  .galeria { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 20px; }
+  .galeria__item { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .galeria__item--big { grid-column: span 2; grid-row: span 2; }
+  .galeria__item--tall { grid-row: span 2; }
+
+  .cta-final { background: var(--color-accent); padding: 100px 28px; text-align: center; }
+  .cta-final__inner { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 32px; }
+  .cta-final__inner h2 { color: #fff; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.1; text-wrap: balance; }
+  .cta-final__btn { background: #fff; color: var(--color-accent-700); border-radius: 999px; padding: 18px 44px; font-size: 18px; font-weight: 700; box-shadow: var(--shadow-md); transition: background-color .2s ease, transform .2s ease; }
+  .cta-final__btn:hover { background: var(--color-accent-100); transform: translateY(-2px); }
+</style>

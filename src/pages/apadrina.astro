@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PhotoSlot from '../components/PhotoSlot.astro';
+
+const check = `<path d="M20 6 9 17l-5-5"></path>`;
+---
+
+<Layout
+  current="apadrina"
+  title="Apadrina"
+  description="Apadrina a un niño de Fundación ChiChiCa desde $5 al mes y sostén educación, alimentación, conectividad y experiencias todo el año en comunidades rurales de Panamá."
+>
+  <section class="hero">
+    <div class="hero__inner cols2">
+      <div>
+        <span class="tag-pill">Apadrina</span>
+        <h1>Cambiar el destino de un estudiante está a un clic</h1>
+        <p class="hero__lead">Con tu aporte mensual te unes a una comunidad de padrinos que sostiene todo el año los programas de educación, alimentación, conectividad y experiencias de Fundación ChiChiCa.</p>
+        <a href="#niveles" class="btn-cta-lift hero__cta">Elige tu nivel de apoyo</a>
+      </div>
+      <div class="hero__photo-wrap">
+        <span class="hero__dot"></span>
+        <div class="hero__photo">
+          <PhotoSlot shape="rect" label="Foto: niña en salón de clases" style="width:100%;height:100%" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="niveles" class="niveles">
+    <div class="niveles__inner">
+      <h2>Elige cómo caminar con ellos</h2>
+      <p class="niveles__lead">Tres niveles de aporte mensual. Todos cambian una historia.</p>
+      <div class="niveles__grid">
+        <div class="plan card-lift-md">
+          <span class="plan__label">Padrino Solidario</span>
+          <div class="plan__price"><span class="plan__amount">$5</span><span class="plan__period">/ mes</span></div>
+          <ul class="plan__list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Alimentación</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Materiales educativos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Actividades comunitarias</li>
+          </ul>
+          <a href="mailto:impacto@chichica.org?subject=Quiero ser Padrino Solidario ($5/mes)" class="btn-cta plan__cta">Hazte Padrino Hoy</a>
+        </div>
+
+        <div class="plan plan--featured pricing-featured">
+          <span class="plan__badge">El más elegido</span>
+          <span class="plan__label plan__label--on-dark">Padrino Impulsor</span>
+          <div class="plan__price"><span class="plan__amount plan__amount--on-dark">$10</span><span class="plan__period plan__period--on-dark">/ mes</span></div>
+          <ul class="plan__list plan__list--on-dark">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-400)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Útiles escolares</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-400)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Talleres</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-400)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Experiencias educativas</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-400)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Apoyo al comedor</li>
+          </ul>
+          <a href="mailto:impacto@chichica.org?subject=Quiero ser Padrino Impulsor ($10/mes)" class="btn-cta btn-cta-onfeatured plan__cta">Hazte Padrino Hoy</a>
+        </div>
+
+        <div class="plan card-lift-md">
+          <span class="plan__label">Padrino Transformador</span>
+          <div class="plan__price"><span class="plan__amount">$20</span><span class="plan__period">/ mes</span></div>
+          <ul class="plan__list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Conectividad Starlink</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Energía</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Programas educativos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" set:html={check} />Visitas y experiencias</li>
+          </ul>
+          <a href="mailto:impacto@chichica.org?subject=Quiero ser Padrino Transformador ($20/mes)" class="btn-cta plan__cta">Hazte Padrino Hoy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="funciona">
+    <div class="funciona__inner">
+      <h2>Cómo funciona</h2>
+      <div class="funciona__grid">
+        <div class="paso">
+          <span class="paso__icon paso__icon--accent">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            <span class="paso__num">1</span>
+          </span>
+          <p>Elige tu monto mensual</p>
+        </div>
+        <div class="paso">
+          <span class="paso__icon paso__icon--accent2">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <span class="paso__num">2</span>
+          </span>
+          <p>Recibe confirmación y bienvenida</p>
+        </div>
+        <div class="paso">
+          <span class="paso__icon paso__icon--accent">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 0 1 9-9 9 9 0 0 1 9 9v7a2 2 0 0 1-2 2h-1"></path><path d="M3 11v7a2 2 0 0 0 2 2h1"></path><circle cx="12" cy="11" r="3"></circle><path d="M12 14v6"></path></svg>
+            <span class="paso__num">3</span>
+          </span>
+          <p>Sigue el impacto con nuestro boletín</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="cta-final__inner">
+      <h2>Cambia una vida desde $5 al mes</h2>
+      <a href="#niveles" class="btn-cta-lift cta-final__btn">Hazte Padrino Hoy</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero { background: #fff; margin-top: 72px; padding: 90px 28px 80px; }
+  .hero__inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(300px, 1.1fr) minmax(280px, 0.9fr); gap: 64px; align-items: center; }
+  .hero__inner h1 { font-size: clamp(36px, 4.6vw, 58px); line-height: 1.08; margin: 0 0 22px; text-wrap: balance; }
+  .hero__lead { font-size: 18px; line-height: 1.65; color: var(--color-neutral-700); margin: 0 0 32px; max-width: 520px; text-wrap: pretty; }
+  .hero__cta { display: inline-block; background: var(--color-accent); color: #fff; border-radius: 999px; padding: 16px 34px; font-size: 17px; font-weight: 700; box-shadow: var(--shadow-md); }
+  .hero__photo-wrap { position: relative; }
+  .hero__dot { position: absolute; top: -22px; right: -18px; width: 96px; height: 96px; border-radius: 50%; background: var(--color-accent-2-100); }
+  .hero__photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); height: 400px; }
+
+  .niveles { padding: 100px 28px; background: var(--color-bg); }
+  .niveles__inner { max-width: 1140px; margin: 0 auto; }
+  .niveles__inner > h2 { font-size: clamp(30px, 3.6vw, 44px); text-align: center; margin: 0 0 12px; }
+  .niveles__lead { text-align: center; font-size: 17px; color: var(--color-neutral-700); margin: 0 0 64px; }
+  .niveles__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: stretch; }
+  .plan { background: #fff; border-radius: var(--radius-lg); padding: 42px 34px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 18px; }
+  .plan--featured { position: relative; background: var(--color-accent-2-900); color: #fff; box-shadow: var(--shadow-lg); transform: scale(1.04); }
+  .plan__badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--color-accent); color: #fff; border-radius: 999px; padding: 6px 18px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; box-shadow: var(--shadow-sm); }
+  .plan__label { font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-neutral-600); }
+  .plan__label--on-dark { color: var(--color-accent-2-200); }
+  .plan__price { display: flex; align-items: baseline; gap: 6px; }
+  .plan__amount { font-family: var(--font-heading); font-size: 58px; line-height: 1; }
+  .plan__amount--on-dark { color: #fff; }
+  .plan__period { font-size: 15px; color: var(--color-neutral-600); }
+  .plan__period--on-dark { color: var(--color-accent-2-300); }
+  .plan__list { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 15.5px; line-height: 1.5; color: var(--color-neutral-700); }
+  .plan__list--on-dark { color: var(--color-accent-2-100); }
+  .plan__list li { display: flex; gap: 12px; align-items: baseline; }
+  .plan__list li svg { flex: none; transform: translateY(2px); }
+  .plan__cta { margin-top: auto; text-align: center; color: #fff; border-radius: 999px; padding: 14px 28px; font-size: 15.5px; font-weight: 700; }
+  .plan__cta { background: var(--color-accent); }
+  .plan--featured .plan__cta { box-shadow: var(--shadow-sm); }
+
+  .funciona { background: #fff; padding: 100px 28px; }
+  .funciona__inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+  .funciona__inner > h2 { font-size: clamp(30px, 3.6vw, 44px); margin: 0 0 64px; }
+  .funciona__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
+  .paso { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .paso__icon { position: relative; width: 88px; height: 88px; border-radius: 50%; display: grid; place-items: center; }
+  .paso__icon--accent { background: var(--color-accent-100); color: var(--color-accent-700); }
+  .paso__icon--accent2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+  .paso__num { position: absolute; top: -6px; right: -6px; width: 32px; height: 32px; border-radius: 50%; background: var(--color-accent); color: #fff; display: grid; place-items: center; font-family: var(--font-heading); font-size: 16px; }
+  .paso p { margin: 0; font-size: 17px; font-weight: 600; max-width: 220px; line-height: 1.5; }
+
+  .cta-final { background: var(--color-accent); padding: 100px 28px; text-align: center; }
+  .cta-final__inner { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 32px; }
+  .cta-final__inner h2 { color: #fff; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.1; text-wrap: balance; }
+  .cta-final__btn { background: #fff; color: var(--color-accent-700); border-radius: 999px; padding: 18px 44px; font-size: 18px; font-weight: 700; box-shadow: var(--shadow-md); }
+  .cta-final__btn:hover { background: var(--color-accent-100); }
+</style>
