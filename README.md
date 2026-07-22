@@ -1,10 +1,6 @@
-# Astro Starter Kit: Minimal
+# Chichica
 
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Astro site for Chichica.
 
 ## 🚀 Project Structure
 
