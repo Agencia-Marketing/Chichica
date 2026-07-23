@@ -1,5 +1,6 @@
 /* Fundación ChiChiCa — design tokens (migrados de Organic design system) */
 :root {
+  --header-h: 72px;
   --color-bg: #f5ead8;
   --color-surface: #ebddc5;
   --color-text: #201e1d;
@@ -70,12 +71,18 @@ p { margin: 0; }
 a { color: var(--color-accent-700); text-decoration: none; }
 a:hover { color: var(--color-accent-600); }
 img { display: block; max-width: 100%; }
+.cover-img { width: 100%; height: 100%; object-fit: cover; }
+.contain-img { width: 100%; height: 100%; object-fit: contain; }
+.circle-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
 summary::-webkit-details-marker { display: none; }
 summary { list-style: none; }
 
 /* — navegación responsive — */
+@media (min-width: 901px) {
+  :root { --header-h: 96px; }
+}
 @media (max-width: 900px) {
   .nav-links { display: none !important; }
   .nav-burger { display: block !important; }
@@ -121,27 +128,3 @@ summary { list-style: none; }
 
 .pricing-featured { transition: transform .25s ease; }
 .pricing-featured:hover { transform: scale(1.04) translateY(-6px); }
-
-/* — placeholder de imagen (sustituye <image-slot>/<x-import> del editor) — */
-.photo-slot {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background:
-    repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-neutral-400) 35%, transparent) 0 12px, transparent 12px 24px),
-    var(--color-neutral-200);
-  color: var(--color-neutral-600);
-  text-align: center;
-  font-size: 12.5px;
-  line-height: 1.4;
-  padding: 10px;
-  overflow: hidden;
-}
-.photo-slot--circle { border-radius: 50%; }
-.photo-slot span {
-  background: color-mix(in srgb, var(--color-neutral-100) 88%, transparent);
-  border-radius: var(--radius-sm);
-  padding: 4px 10px;
-}

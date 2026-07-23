@@ -1,11 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PhotoSlot from '../components/PhotoSlot.astro';
 
-const equipo = [1, 2, 3, 4, 5, 6, 7, 8];
+const equipo = [
+  { photo: 'adrian-lorenzo', nombre: 'Adrián Lorenzo' },
+  { photo: 'anika-batista', nombre: 'Anika Batista' },
+  { photo: 'jeancarlos-giron', nombre: 'Jeancarlos Girón' },
+  { photo: 'mitzie-lasso', nombre: 'Mitzie Lasso' },
+  { photo: 'nadine-zapata', nombre: 'Nadine Zapata' },
+];
 const aliados = [
-  'MEDUCA', 'MIDES', 'Georgetown University', 'Lacoste',
-  'Reebok', 'Heineken', 'Davivienda', 'Super Xtra',
+  { photo: 'meduca', nombre: 'MEDUCA' },
+  { photo: 'mides', nombre: 'MIDES' },
+  { photo: 'dgi', nombre: 'DGI' },
+  { photo: 'gcl', nombre: 'Global Competitiveness Leadership Program' },
+  { photo: 'panama-en-positivo', nombre: 'Panamá en Positivo' },
 ];
 ---
 
@@ -16,7 +24,7 @@ const aliados = [
 >
   <section class="hero">
     <div class="hero__bg">
-      <PhotoSlot shape="rect" label="Foto: equipo en comunidad o entrega de útiles" style="width:100%;height:100%" />
+      <img src="/fotos/nuestra-historia.webp" alt="Fundación ChiChiCa en comunidad" class="cover-img" />
     </div>
     <div class="hero__scrim"></div>
     <h1 class="hero__title">Nuestra Historia</h1>
@@ -25,9 +33,9 @@ const aliados = [
   <section class="origen">
     <div class="origen__inner cols2">
       <div class="origen__collage">
-        <div class="origen__photo origen__photo--1"><PhotoSlot shape="rect" label="Foto: jornada en comunidad" /></div>
-        <div class="origen__photo origen__photo--2"><PhotoSlot shape="rect" label="Foto: entrega de útiles" /></div>
-        <div class="origen__photo origen__photo--3"><PhotoSlot shape="rect" label="Foto: fiesta de navidad" /></div>
+        <div class="origen__photo origen__photo--1"><img src="/fotos/voluntariado-2.webp" alt="Jornada en comunidad" class="cover-img" /></div>
+        <div class="origen__photo origen__photo--2"><img src="/fotos/entrega.webp" alt="Entrega de útiles escolares" class="cover-img" /></div>
+        <div class="origen__photo origen__photo--3"><img src="/fotos/navidad.webp" alt="Fiesta de Navidad" class="cover-img" /></div>
         <span class="origen__dot origen__dot--lg"></span>
         <span class="origen__dot origen__dot--sm"></span>
       </div>
@@ -61,7 +69,7 @@ const aliados = [
       <h2>3 programas, un mismo propósito</h2>
       <div class="programas__grid">
         <div class="programa card-lift-md">
-          <div class="programa__photo"><PhotoSlot shape="rect" label="Foto: aula / útiles escolares" /></div>
+          <div class="programa__photo"><img src="/fotos/somos-padrino.webp" alt="Somos Padrino" class="cover-img" /></div>
           <div class="programa__body">
             <span class="tag-inline tag-inline--accent">Acceso y retención escolar</span>
             <h3>Somos Padrino</h3>
@@ -74,7 +82,7 @@ const aliados = [
           </div>
         </div>
         <div class="programa card-lift-md">
-          <div class="programa__photo"><PhotoSlot shape="rect" label="Foto: panel solar / Starlink" /></div>
+          <div class="programa__photo"><img src="/fotos/somos-mas.webp" alt="Somos Más — conectividad e infraestructura" class="cover-img" /></div>
           <div class="programa__body">
             <span class="tag-inline tag-inline--accent2">Infraestructura y conectividad</span>
             <h3>Somos Más</h3>
@@ -87,7 +95,7 @@ const aliados = [
           </div>
         </div>
         <div class="programa card-lift-md">
-          <div class="programa__photo"><PhotoSlot shape="rect" label="Foto: actividad recreativa" /></div>
+          <div class="programa__photo"><img src="/fotos/somos-alegria.webp" alt="Somos Alegría — actividades recreativas" class="cover-img" /></div>
           <div class="programa__body">
             <span class="tag-inline tag-inline--accent">Desarrollo humano y motivación</span>
             <h3>Somos Alegría</h3>
@@ -108,14 +116,14 @@ const aliados = [
       <h2>Las personas detrás</h2>
       <p class="equipo__lead">Somos personas que decidieron no mirar hacia otro lado.</p>
       <div class="equipo__grid">
-        {equipo.map((i) => (
+        {equipo.map((p) => (
           <div class="equipo__item">
-            <PhotoSlot shape="circle" label="Foto" style="width:110px;height:110px" />
-            <span class="equipo__meta">Nombre<br />Rol</span>
+            <img src={`/fotos/equipo/${p.photo}.webp`} alt={p.nombre} style="width:150px;height:150px" class="circle-img" />
+            <span class="equipo__meta">{p.nombre}</span>
           </div>
         ))}
       </div>
-      <p class="equipo__pending">Nombres y roles pendientes de confirmación del equipo.</p>
+      <p class="equipo__pending">Roles del equipo pendientes de confirmación.</p>
     </div>
   </section>
 
@@ -124,8 +132,8 @@ const aliados = [
       <h2>Aliados que caminan con nosotros</h2>
       <p class="aliados__lead">Instituciones y empresas que creen en la educación como motor de cambio.</p>
       <div class="aliados__grid">
-        {aliados.map((nombre) => (
-          <PhotoSlot label={nombre} style="width:100%;height:56px" />
+        {aliados.map((a) => (
+          <img src={`/fotos/aliados/${a.photo}.webp`} alt={a.nombre} style="width:100%;height:56px" class="contain-img" />
         ))}
       </div>
     </div>
@@ -139,7 +147,7 @@ const aliados = [
     display: grid;
     place-items: center;
     overflow: hidden;
-    margin-top: 72px;
+    margin-top: var(--header-h);
   }
   .hero__bg { position: absolute; inset: 0; }
   .hero__scrim { position: absolute; inset: 0; pointer-events: none; background: rgba(20,24,16,0.5); }
@@ -197,7 +205,7 @@ const aliados = [
   .equipo__inner > h2 { font-size: clamp(32px, 3.8vw, 46px); margin: 0 0 14px; }
   .equipo__lead { font-size: 18px; color: var(--color-neutral-700); margin: 0 0 56px; }
   .equipo__grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; }
-  .equipo__item { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 128px; }
+  .equipo__item { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 168px; }
   .equipo__meta { font-size: 13.5px; color: var(--color-neutral-600); line-height: 1.3; }
   .equipo__pending { margin: 40px 0 0; font-size: 13px; color: var(--color-neutral-500); }
 

@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PhotoSlot from '../components/PhotoSlot.astro';
 
 const beneficios = [
   'Presencia de marca en materiales digitales',
@@ -10,7 +9,22 @@ const beneficios = [
   'Acceso para colaboradores a jornadas de voluntariado',
   'Reporte anual de impacto',
 ];
-const empresas = ['Lacoste', 'Reebok', 'Jampro', 'Davivienda', 'Super Xtra', 'Heineken'];
+const empresas = [
+  { photo: 'lacoste-foundation', nombre: 'Lacoste Foundation' },
+  { photo: 'reebok', nombre: 'Reebok' },
+  { photo: 'jampro', nombre: 'Jampro' },
+  { photo: 'davivienda', nombre: 'Davivienda' },
+  { photo: 'super-xtra', nombre: 'Super Xtra' },
+  { photo: 'heineken', nombre: 'Heineken' },
+  { photo: 'bap', nombre: 'BAP' },
+  { photo: 'causa-nuestra', nombre: 'Causa Nuestra' },
+  { photo: 'cumple-con-causa', nombre: 'Cumple con Causa' },
+  { photo: 'grant-thornton', nombre: 'Grant Thornton' },
+  { photo: 'phillips', nombre: 'Phillips' },
+  { photo: 'utp', nombre: 'UTP' },
+  { photo: 'universidad-istmo', nombre: 'Universidad del Istmo' },
+  { photo: 'cn-real-estate', nombre: 'C&N Real Estate' },
+];
 const check = `<path d="M20 6 9 17l-5-5"></path>`;
 ---
 
@@ -21,7 +35,7 @@ const check = `<path d="M20 6 9 17l-5-5"></path>`;
 >
   <section class="hero">
     <div class="hero__bg">
-      <PhotoSlot shape="rect" label="Foto: equipo corporativo de voluntarios con camisetas de marca" style="width:100%;height:100%" />
+      <img src="/fotos/voluntariado-8.webp" alt="Equipo corporativo de voluntarios con marcas aliadas" class="cover-img" />
     </div>
     <div class="hero__scrim"></div>
     <div class="hero__content">
@@ -59,8 +73,8 @@ const check = `<path d="M20 6 9 17l-5-5"></path>`;
       <h2>Empresas que ya confían</h2>
       <p class="confian__lead">Marcas que ya caminan con las comunidades.</p>
       <div class="confian__grid">
-        {empresas.map((nombre) => (
-          <div class="confian__logo"><PhotoSlot label={nombre} style="width:100%;height:52px" /></div>
+        {empresas.map((e) => (
+          <div class="confian__logo"><img src={`/fotos/sponsor/${e.photo}.webp`} alt={e.nombre} style="width:100%;height:52px" class="contain-img" /></div>
         ))}
       </div>
     </div>
@@ -81,7 +95,7 @@ const check = `<path d="M20 6 9 17l-5-5"></path>`;
     display: grid;
     place-items: center;
     overflow: hidden;
-    margin-top: 72px;
+    margin-top: var(--header-h);
   }
   .hero__bg { position: absolute; inset: 0; }
   .hero__scrim {

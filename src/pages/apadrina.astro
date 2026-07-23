@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PhotoSlot from '../components/PhotoSlot.astro';
 
 const check = `<path d="M20 6 9 17l-5-5"></path>`;
 ---
@@ -21,7 +20,7 @@ const check = `<path d="M20 6 9 17l-5-5"></path>`;
       <div class="hero__photo-wrap">
         <span class="hero__dot"></span>
         <div class="hero__photo">
-          <PhotoSlot shape="rect" label="Foto: niña en salón de clases" style="width:100%;height:100%" />
+          <img src="/fotos/cambiar-destino.webp" alt="Cambiar el destino de un estudiante" class="cover-img" />
         </div>
       </div>
     </div>
@@ -109,7 +108,7 @@ const check = `<path d="M20 6 9 17l-5-5"></path>`;
 </Layout>
 
 <style>
-  .hero { background: #fff; margin-top: 72px; padding: 90px 28px 80px; }
+  .hero { background: #fff; margin-top: var(--header-h); padding: 90px 28px 80px; }
   .hero__inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(300px, 1.1fr) minmax(280px, 0.9fr); gap: 64px; align-items: center; }
   .hero__inner h1 { font-size: clamp(36px, 4.6vw, 58px); line-height: 1.08; margin: 0 0 22px; text-wrap: balance; }
   .hero__lead { font-size: 18px; line-height: 1.65; color: var(--color-neutral-700); margin: 0 0 32px; max-width: 520px; text-wrap: pretty; }
