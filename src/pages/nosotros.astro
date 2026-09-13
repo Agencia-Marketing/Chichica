@@ -33,7 +33,7 @@ const aliados = [
 >
   <section class="hero">
     <div class="hero__bg">
-      <img src="/fotos/nuestra-historia.webp" alt="Fundación ChiChiCa en comunidad" class="cover-img" />
+      <img src="/fotos/nuestra-historia.webp" width="2200" height="1467" alt="Fundación ChiChiCa en comunidad" class="cover-img" />
     </div>
     <div class="hero__scrim"></div>
     <h1 class="hero__title">Nuestra Historia</h1>
@@ -42,9 +42,9 @@ const aliados = [
   <section class="origen">
     <div class="origen__inner cols2">
       <div class="origen__collage">
-        <div class="origen__photo origen__photo--1"><img src="/fotos/navidad.webp" alt="Fiesta de Navidad" class="cover-img" /></div>
-        <div class="origen__photo origen__photo--2"><img src="/fotos/entrega.webp" alt="Entrega de útiles escolares" class="cover-img" /></div>
-        <div class="origen__photo origen__photo--3"><img src="/fotos/voluntariado-2.webp" alt="Jornada en comunidad" class="cover-img" /></div>
+        <div class="origen__photo origen__photo--1"><img src="/fotos/navidad.webp" width="1100" height="733" alt="Fiesta de Navidad" class="cover-img" /></div>
+        <div class="origen__photo origen__photo--2"><img src="/fotos/entrega.webp" width="1100" height="733" alt="Entrega de útiles escolares" class="cover-img" /></div>
+        <div class="origen__photo origen__photo--3"><img src="/fotos/voluntariado-2.webp" width="825" height="1087" alt="Jornada en comunidad" class="cover-img" /></div>
         <span class="origen__dot origen__dot--lg"></span>
         <span class="origen__dot origen__dot--sm"></span>
       </div>
@@ -78,7 +78,7 @@ const aliados = [
       <h2>3 programas, un mismo propósito</h2>
       <div class="programas__grid">
         <div class="programa card-lift-md">
-          <div class="programa__photo"><img src="/fotos/somos-padrino.webp" alt="Somos Padrino" class="cover-img" /></div>
+          <div class="programa__photo"><img src="/fotos/somos-padrino.webp" width="1100" height="733" alt="Somos Padrino" class="cover-img" /></div>
           <div class="programa__body">
             <span class="tag-inline tag-inline--accent">Acceso y retención escolar</span>
             <h3>Somos Padrino</h3>
@@ -91,7 +91,7 @@ const aliados = [
           </div>
         </div>
         <div class="programa card-lift-md">
-          <div class="programa__photo"><img src="/fotos/somos-mas.webp" alt="Somos Más — conectividad e infraestructura" class="cover-img" /></div>
+          <div class="programa__photo"><img src="/fotos/somos-mas.webp" width="1100" height="733" alt="Somos Más — conectividad e infraestructura" class="cover-img" /></div>
           <div class="programa__body">
             <span class="tag-inline tag-inline--accent2">Infraestructura y conectividad</span>
             <h3>Somos Más</h3>
@@ -104,7 +104,7 @@ const aliados = [
           </div>
         </div>
         <div class="programa card-lift-md">
-          <div class="programa__photo"><img src="/fotos/somos-alegria.webp" alt="Somos Alegría — actividades recreativas" class="cover-img" /></div>
+          <div class="programa__photo"><img src="/fotos/somos-alegria.webp" width="1100" height="733" alt="Somos Alegría — actividades recreativas" class="cover-img" /></div>
           <div class="programa__body">
             <span class="tag-inline tag-inline--accent">Desarrollo humano y motivación</span>
             <h3>Somos Alegría</h3>
@@ -128,7 +128,7 @@ const aliados = [
         {equipo.map((p) => (
           <div class="equipo__item">
             {p.photo ? (
-              <img src={`/fotos/equipo/${p.photo}.webp`} alt={p.nombre} style="width:150px;height:150px" class="circle-img" />
+              <img src={`/fotos/equipo/${p.photo}.webp`} alt={p.nombre} width="150" height="150" style="width:150px;height:150px" class="circle-img" />
             ) : (
               <span class="equipo__placeholder" style="width:150px;height:150px">{iniciales(p.nombre)}</span>
             )}
