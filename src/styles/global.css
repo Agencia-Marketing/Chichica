@@ -71,9 +71,9 @@ p { margin: 0; }
 a { color: var(--color-accent-700); text-decoration: none; }
 a:hover { color: var(--color-accent-600); }
 img { display: block; max-width: 100%; }
-.cover-img { width: 100%; height: 100%; object-fit: cover; }
-.contain-img { width: 100%; height: 100%; object-fit: contain; }
-.circle-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.cover-img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; }
+.contain-img { display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; object-position: center; }
+.circle-img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; border-radius: 50%; }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
 summary::-webkit-details-marker { display: none; }

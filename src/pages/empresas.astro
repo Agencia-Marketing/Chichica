@@ -96,7 +96,8 @@ const check = `<path d="M20 6 9 17l-5-5"></path>`;
     place-items: center;
     overflow: hidden;
   }
-  .hero__bg { position: absolute; inset: 0; }
+  .hero__bg { position: absolute; inset: 0; overflow: hidden; }
+  .hero__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .hero__scrim {
     position: absolute;
     inset: 0;

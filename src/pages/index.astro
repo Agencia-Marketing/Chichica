@@ -137,7 +137,8 @@ import Layout from '../layouts/Layout.astro';
     place-items: center;
     overflow: hidden;
   }
-  .hero__bg { position: absolute; inset: 0; }
+  .hero__bg { position: absolute; inset: 0; overflow: hidden; }
+  .hero__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .hero__scrim {
     position: absolute;
     inset: 0;
@@ -230,12 +231,12 @@ import Layout from '../layouts/Layout.astro';
   .historia__text { font-size: 17.5px; line-height: 1.7; color: var(--color-neutral-700); margin: 0 0 28px; text-wrap: pretty; }
   .historia__signature { font-family: var(--font-heading); font-size: 19px; color: var(--color-accent-700); }
 
-  .impacto { background: var(--color-accent-2-900); color: #fff; padding: 110px 28px 100px; text-align: center; }
+  .impacto { background: #ee831d; color: #fff; padding: 110px 28px 100px; text-align: center; }
   .impacto__inner { max-width: 1000px; margin: 0 auto; }
   .impacto__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 48px; }
   .impacto__number { font-family: var(--font-heading); font-size: clamp(56px, 7vw, 92px); line-height: 1; color: #fff; }
-  .impacto__label { margin-top: 14px; font-size: 17px; font-weight: 600; color: var(--color-accent-2-200); }
-  .impacto__since { margin: 64px 0 0; font-size: 15px; letter-spacing: 0.04em; color: var(--color-accent-2-300); }
+  .impacto__label { margin-top: 14px; font-size: 17px; font-weight: 600; color: #fff; }
+  .impacto__since { margin: 64px 0 0; font-size: 15px; letter-spacing: 0.04em; color: #fff; }
 
   .cambio { padding: 110px 28px 120px; background: var(--color-bg); }
   .cambio__inner { max-width: 1140px; margin: 0 auto; }
