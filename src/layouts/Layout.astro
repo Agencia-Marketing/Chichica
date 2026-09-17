@@ -61,6 +61,11 @@ const jsonLd = {
     <meta name="twitter:description" content={description} />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <script is:inline>
+      window.traks = window.traks || function () { (window.traks.q = window.traks.q || []).push(arguments); };
+    </script>
+    <script is:inline defer data-site="pb_live_zvwlw3trbnjn3zdjzlypd2w4" src="https://traks-collect.migue122747.workers.dev/t.js"></script>
   </head>
   <body>
     <Nav current={current} />
