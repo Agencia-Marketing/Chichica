@@ -31,7 +31,7 @@ Amatic SC (títulos) y Calibri Light (cuerpo). El sitio usa hoy Caprasimo y Figt
 
 ## Equipo
 
-Lista en `src/pages/nosotros.astro` (`equipo`). Fotos en `public/fotos/equipo/<slug>.webp`; con `photo: null` se muestran iniciales. Fotos nuevas: convertir a webp (`cwebp -q 80 -resize 0 1000`, ~1000 px de alto) con nombre en kebab-case y no dejar el JPEG original en `public/`. Sin foto aún: Stephanie Deans, Maricarmen Aguilar y Monica Aguirre.
+Lista en `src/pages/nosotros.astro` (`equipo`). Fotos en `public/fotos/equipo/<slug>.webp`; con `photo: null` se muestran iniciales. Fotos nuevas: convertir a webp (`cwebp -q 80 -resize 0 1000`, ~1000 px de alto) con nombre en kebab-case y no dejar el JPEG original en `public/`. Todo el equipo ya tiene foto.
 
 ## Iconos
 
